@@ -54,6 +54,7 @@ const obj1:{id?:number;nome:string;idade:number} = {
 type Pessoa = {id?:number;nome:string;idade:number}
 
 const p:Pessoa={
+
     id:10,
     nome:"Qualquer coisa",
     idade:32
@@ -63,3 +64,43 @@ const p1:Pessoa={
     nome:"Qualquer coisa",
     idade:32
 }
+
+// Funções em Javascript/typescript
+
+// O que é uma função?
+/**
+ * Um bloco de código que executa uma tarefa 
+ * (Tarefa é uma sequência de comandos de código)?
+ * 
+ * Benefício: Não repetir código
+ */
+
+const f =  (variavel:number):number=>10
+const f3 = f(10)
+console.log("O valor de x é "+f3.toString())
+
+//Terminem essa função para retornar a soma de todos
+//Os elementos de um vetor.
+// somaVetor([1,2,3])   => 6
+// somaVetor([1,2,3,4]) => 10
+function somaVetor(vetor:number[]):number{
+    let soma = 0
+    for (let i = 0; i < vetor.length; i++) {
+        soma = soma +  vetor[i]!
+    }
+    return soma
+}
+console.log(`O valor da soma do vetor é ${somaVetor([1,2,3])}`)
+
+//2 - Some as posições de um vetor que são pares
+// Ex  somaPares([1,2,3,4])  => 6
+// Ex  somaPares([1,2,3,4,5])=> 6
+// Ex  somaPares([1,2,3,4,8])=> 14
+
+
+//3 - Faça uma função que receba 2 vetores e 
+// faça a operação de merge entre eles
+//EX:  mergeVetor([1,2,3],[4,5,6]) => [1,2,3,4,5,6]
+
+
+
